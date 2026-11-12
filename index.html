@@ -101,8 +101,6 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);f
 @media (prefers-reduced-motion:reduce){[class*="sd-"]{animation:none!important;transition:none!important}}
 </style>
 <style data-sd="sparkle">@keyframes sd-spark{to{opacity:0;transform:translateY(24px) scale(.3) rotate(120deg)}}</style>
-<style data-sd="sakura">@keyframes sd-fall{to{transform:translate(70px,112vh) rotate(540deg)}}</style>
-<style data-sd="reveal">.sd-rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}.sd-rv.sd-in{opacity:1;transform:none}</style>
 </head>
 <body>
 <div class="top"><div class="wrap">
@@ -201,13 +199,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);f
 <script data-sd="sparkle">(function(){var last=0,cols=['#ffd23f','#ff7eb6','#b69cff','#fff'];document.addEventListener('mousemove',function(e){var n=Date.now();if(n-last<45)return;last=n;
 var b=document.createElement('b');b.textContent='\u2726';b.style.cssText='position:fixed;pointer-events:none;z-index:9999;font-size:'+(10+Math.random()*10)+'px;color:'+cols[Math.floor(Math.random()*4)]+';left:'+e.clientX+'px;top:'+e.clientY+'px;animation:sd-spark .7s ease-out forwards';
 document.body.appendChild(b);setTimeout(function(){b.remove()},720)})})();</script>
-<script data-sd="sakura">(function(){var c=document.createElement('div');c.style.cssText='position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:9999';document.body.appendChild(c);
-for(var i=0;i<22;i++){var p=document.createElement('i'),s=8+Math.random()*10;
-p.style.cssText='position:absolute;top:-20px;left:'+Math.random()*100+'vw;width:'+s+'px;height:'+s*1.25+'px;background:#ffc2dd;border-radius:150% 0 150% 0;opacity:.85;animation:sd-fall '+(8+Math.random()*10)+'s linear '+(-Math.random()*14)+'s infinite';c.appendChild(p)}})();</script>
-<script data-sd="reveal">(function(){var els=document.querySelectorAll('section,.box,.step,.panel,h2');if(!('IntersectionObserver' in window)){return}
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('sd-in');io.unobserve(e.target)}})},{threshold:.12});
-els.forEach(function(el){el.classList.add('sd-rv');io.observe(el)})})();</script>
 </body>
 </html>
 
-damn really? gay
+<span class="sd-glow">damn really? gay</span>
