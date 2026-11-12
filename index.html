@@ -102,6 +102,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);f
 </style>
 <style data-sd="sparkle">@keyframes sd-spark{to{opacity:0;transform:translateY(24px) scale(.3) rotate(120deg)}}</style>
 <style data-sd="sakura">@keyframes sd-fall{to{transform:translate(70px,112vh) rotate(540deg)}}</style>
+<style data-sd="reveal">.sd-rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}.sd-rv.sd-in{opacity:1;transform:none}</style>
 </head>
 <body>
 <div class="top"><div class="wrap">
@@ -203,6 +204,9 @@ document.body.appendChild(b);setTimeout(function(){b.remove()},720)})})();</scri
 <script data-sd="sakura">(function(){var c=document.createElement('div');c.style.cssText='position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:9999';document.body.appendChild(c);
 for(var i=0;i<22;i++){var p=document.createElement('i'),s=8+Math.random()*10;
 p.style.cssText='position:absolute;top:-20px;left:'+Math.random()*100+'vw;width:'+s+'px;height:'+s*1.25+'px;background:#ffc2dd;border-radius:150% 0 150% 0;opacity:.85;animation:sd-fall '+(8+Math.random()*10)+'s linear '+(-Math.random()*14)+'s infinite';c.appendChild(p)}})();</script>
+<script data-sd="reveal">(function(){var els=document.querySelectorAll('section,.box,.step,.panel,h2');if(!('IntersectionObserver' in window)){return}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('sd-in');io.unobserve(e.target)}})},{threshold:.12});
+els.forEach(function(el){el.classList.add('sd-rv');io.observe(el)})})();</script>
 </body>
 </html>
 
